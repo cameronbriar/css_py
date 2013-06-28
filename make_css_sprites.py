@@ -67,7 +67,6 @@ def main():
     css = CSS()
     filename = sys.argv[1]
 
-    css_data = css.make_sprites_from_file(filename)
-    print css_data
+    css.make_sprites_from_file(filename)
 
 if __name__ == '__main__': sys.exit(main())
