@@ -29,7 +29,7 @@ class CSS:
         """ coordinates is a comma-separated string of ints """
 
         coords = [int(x) for x in coordinates.split(',')]
-        
+
         assert len(coords) == 4, "Coordinates are not rectangular"
 
         start_x, start_y, upper_right, bottom_right = coords
@@ -38,11 +38,11 @@ class CSS:
         height = bottom_right - start_y
 
         css = {}
-        
+
         css['width']   = str(width)  + "px;"
         css['height']  = str(height) + "px;"
 
-        css["background-position"] = "-" + str(start_x) + "px -" + str(start_y) + "px;"
+        css['background-position'] = "-" + str(start_x) + "px -" + str(start_y) + "px;"
 
         return css
 
@@ -56,7 +56,7 @@ class CSS:
             css_data.append(self.make_sprite(c))
 
         for i, data in enumerate(css_data):
-            print 'image-{0}'.format(i), "{"
+            print '.image-{0}'.format(i+1), "{"
             print '\t', 'width:',  data['width']
             print '\t', 'height:', data['height']
             print '\t', 'background-position:', data['background-position']
@@ -69,5 +69,5 @@ def main():
 
     css_data = css.make_sprites_from_file(filename)
     print css_data
-    
+
 if __name__ == '__main__': sys.exit(main())
