@@ -1,5 +1,6 @@
 """
 Generate CSS sprites given rectangle coordinates
+
 Input file should look like:
 
 190,144,560,239
@@ -15,6 +16,38 @@ Input file should look like:
 495,471,628,547
 495,548,628,624
 175,831,688,912
+
+
+Output will look like:
+
+.image-1 {
+    width: 370px;
+    height: 95px;
+    background-position: -190px -144px;
+}
+.image-2 {
+    width: 497px;
+    height: 102px;
+    background-position: -190px -239px;
+}
+.image-3 {
+    width: 497px;
+    height: 55px;
+    background-position: -191px -622px;
+}
+.image-4 {
+    width: 158px;
+    height: 34px;
+    background-position: -190px -358px;
+}
+.image-5 {
+    width: 178px;
+    height: 34px;
+    background-position: -502px -358px;
+}
+.image-6 {
+    ...
+    ...
 
 """
 
